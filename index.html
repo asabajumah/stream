@@ -6,147 +6,96 @@
 
 <title>Stream Music – Asaba Jumah</title>
 
+<meta name="description" content="Listen and stream official music by Asaba Jumah on Spotify, YouTube, Deezer, TIDAL, and Amazon Music.">
+
 <link rel="icon" href="/favicon.ico">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- ✅ SEO: ARTIST (PERSON SCHEMA UPDATED) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Asaba Jumah",
-  "url": "https://www.asabajumah.top",
-  "image": "https://www.asabajumah.top/asabajumah.jpg",
-  "jobTitle": "Artist",
-  "description": "Ugandan artist, actor and creative performer.",
-  "birthDate": "2005-09-23",
-  "birthPlace": {
-    "@type": "Place",
-    "name": "Hoima, Uganda"
-  },
-  "nationality": {
-    "@type": "Country",
-    "name": "Uganda"
-  },
-  "sameAs": [
-    "https://www.facebook.com/djfelixpro",
-    "https://x.com/asabajumah",
-    "https://www.instagram.com/djfelixpro",
-    "https://www.tiktok.com/@asabajumah",
-    "https://www.youtube.com/@asabajumah",
-    "https://www.imdb.com/name/nm18243050/",
-    "https://www.themoviedb.org/person/6077619-asaba-jumah"
-  ],
-  "spouse": {
-    "@type": "Person",
-    "name": "Nakanjako Naume"
-  },
-  "parent": [
-    {
-      "@type": "Person",
-      "name": "Muhumuza Elias"
-    },
-    {
-      "@type": "Person",
-      "name": "Balikya Hadijah"
-    }
-  ],
-  "award": "Black Film Awards 2025"
-}
-</script>
-
 <style>
-body {
+body{
   margin:0;
   font-family:Arial;
   background:#020617;
   color:white;
   text-align:center;
-  overflow-x:hidden;
-}
-
-/* 🌊 WAVES */
-.waves {
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:-1;
-}
-
-.wave {
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:200%;
-  height:200px;
-  background:rgba(56,189,248,0.15);
-  border-radius:43%;
-  animation:waveMove 12s linear infinite;
-}
-
-.wave2 {animation-duration:18s; opacity:0.3;}
-.wave3 {animation-duration:25s; opacity:0.2;}
-
-@keyframes waveMove {
-  0% {transform:translateX(0);}
-  100% {transform:translateX(-50%);}
 }
 
 /* HERO */
-.hero img {
+.hero{
+  padding:60px 20px;
+  background:linear-gradient(to bottom,#020617,#0f172a);
+}
+
+.hero h1{
+  color:#38bdf8;
+  font-size:40px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+  max-width:1000px;
+  margin:40px auto;
+  padding:0 20px;
+}
+
+.card{
+  background:#1e293b;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.card img{
   width:100%;
-  height:300px;
+  height:180px;
   object-fit:cover;
 }
 
-/* PROFILE */
-.profile img {
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  border:4px solid #020617;
-  margin-top:-60px;
+.card-content{
+  padding:15px;
 }
 
-.profile h1 {
-  margin:10px 0 5px;
+.card h3{
+  color:#38bdf8;
+  margin:0;
 }
 
-/* CARD */
-.card {
-  background:#1e293b;
-  max-width:420px;
-  margin:20px auto;
-  padding:20px;
-  border-radius:12px;
+.card p{
+  color:#cbd5e1;
 }
 
-/* BUTTON */
-.btn {
-  display:block;
-  margin:10px auto;
-  padding:12px;
-  border-radius:8px;
-  font-weight:bold;
-  width:90%;
+/* LINKS */
+.links a{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin:5px;
+  padding:8px 10px;
+  border-radius:6px;
   text-decoration:none;
+  font-size:14px;
+  background:#0f172a;
+  color:white;
 }
 
-.read {background:#38bdf8;color:black;}
+.links a:hover{
+  background:#38bdf8;
+  color:black;
+}
 
-/* PROFILE GRID */
-.profile-grid {
+/* PLATFORM GRID */
+.profiles{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
   gap:15px;
   max-width:800px;
-  margin:30px auto;
+  margin:40px auto;
 }
 
-.profile-card {
+.profile-card{
   background:#1e293b;
   padding:15px;
   border-radius:12px;
@@ -155,148 +104,125 @@ body {
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:10px;
+  gap:8px;
   transition:0.3s;
 }
 
-.profile-card:hover {
+.profile-card:hover{
   transform:scale(1.05);
   background:#38bdf8;
   color:black;
 }
 
-.profile-card img {
+.profile-card img{
   width:32px;
   height:32px;
 }
 
 /* FOOTER */
-footer {
-  margin-top:50px;
+footer{
   background:#0f172a;
   padding:25px;
-}
-
-footer a {
-  color:#cbd5e1;
-  text-decoration:none;
-  margin:6px;
-  font-size:13px;
-}
-
-/* RIGHT NAV */
-.right-nav {
-  position:fixed;
-  right:15px;
-  top:50%;
-  transform:translateY(-50%);
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.right-nav a {
-  width:45px;
-  height:45px;
-  background:#1e293b;
-  color:#38bdf8;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:10px;
+  margin-top:50px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- 🌊 WAVES -->
-<div class="waves">
-  <div class="wave"></div>
-  <div class="wave wave2"></div>
-  <div class="wave wave3"></div>
-</div>
-
 <!-- HERO -->
 <div class="hero">
-<img src="cover.jpg">
+<h1>Stream Music</h1>
+<p>Official releases by Asaba Jumah</p>
 </div>
 
-<!-- PROFILE -->
-<div class="profile">
-<img src="asabajumah.jpg">
-<h1>Asaba Jumah</h1>
-<p>Artist • Actor • Creator</p>
-</div>
+<!-- MUSIC -->
+<div class="grid">
 
-<!-- BIO -->
 <div class="card">
-<h2>About Artist</h2>
-<p>Ugandan artist, actor and creative performer building global recognition.</p>
-<a class="btn read" href="about.html">Read Full Biography</a>
+<img src="song1.jpg">
+<div class="card-content">
+<h3>New Era</h3>
+<p>Latest release</p>
+
+<div class="links">
+<a href="https://open.spotify.com/artist/4rneWabSFmcWDEKKsDN2mY">
+<img src="https://www.google.com/s2/favicons?domain=spotify.com&sz=64" width="16"> Spotify
+</a>
+
+<a href="https://www.youtube.com/@asabajumah">
+<img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" width="16"> YouTube
+</a>
+
+<a href="https://tidal.com/artist/77292471">
+<img src="https://www.google.com/s2/favicons?domain=tidal.com&sz=64" width="16"> TIDAL
+</a>
 </div>
 
-<!-- PROFILES -->
-<div class="profile-grid">
+</div>
+</div>
+
+<div class="card">
+<img src="song2.jpg">
+<div class="card-content">
+<h3>Street Dreams</h3>
+<p>Official audio</p>
+
+<div class="links">
+<a href="https://www.deezer.com/us/artist/383696591">
+<img src="https://www.google.com/s2/favicons?domain=deezer.com&sz=64" width="16"> Deezer
+</a>
+
+<a href="https://music.amazon.ca/artists/B0GW8CSKRR/asaba-jumah">
+<img src="https://www.google.com/s2/favicons?domain=amazon.com&sz=64" width="16"> Amazon
+</a>
+
+<a href="https://open.spotify.com/artist/4rneWabSFmcWDEKKsDN2mY">
+<img src="https://www.google.com/s2/favicons?domain=spotify.com&sz=64" width="16"> Spotify
+</a>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<!-- PLATFORMS -->
+<h2 style="color:#38bdf8;">Streaming Platforms</h2>
+
+<div class="profiles">
 
 <a class="profile-card" href="https://open.spotify.com/artist/4rneWabSFmcWDEKKsDN2mY">
 <img src="https://www.google.com/s2/favicons?domain=spotify.com&sz=64">
-<span>Spotify</span>
+Spotify
 </a>
 
 <a class="profile-card" href="https://www.deezer.com/us/artist/383696591">
 <img src="https://www.google.com/s2/favicons?domain=deezer.com&sz=64">
-<span>Deezer</span>
+Deezer
 </a>
 
 <a class="profile-card" href="https://tidal.com/artist/77292471">
 <img src="https://www.google.com/s2/favicons?domain=tidal.com&sz=64">
-<span>TIDAL</span>
+TIDAL
 </a>
 
 <a class="profile-card" href="https://music.amazon.ca/artists/B0GW8CSKRR/asaba-jumah">
 <img src="https://www.google.com/s2/favicons?domain=amazon.com&sz=64">
-<span>Amazon</span>
+Amazon
 </a>
 
 <a class="profile-card" href="https://www.youtube.com/@asabajumah">
 <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64">
-<span>YouTube</span>
-</a>
-
-<a class="profile-card" href="https://www.imdb.com/name/nm18243050/">
-<img src="https://www.google.com/s2/favicons?domain=imdb.com&sz=64">
-<span>IMDb</span>
-</a>
-
-<a class="profile-card" href="https://www.themoviedb.org/person/6077619-asaba-jumah">
-<img src="https://www.google.com/s2/favicons?domain=themoviedb.org&sz=64">
-<span>TMDb</span>
+YouTube
 </a>
 
 </div>
 
 <!-- FOOTER -->
 <footer>
-<a href="https://www.asabajumah.top">Home</a>
-<a href="https://www.asabajumah.top/films.html">Films</a>
-<a href="https://www.asabajumah.top/blog.html">Blog</a>
-<a href="https://www.asabajumah.top/contact.html">Contact</a>
-<a href="https://help.asabajumah.top">Help</a>
-<a href="https://www.asabajumah.top/about.html">About</a>
-
-<p style="color:#64748b;margin-top:10px;">© 2026 Asaba Jumah</p>
+© 2026 Asaba Jumah
 </footer>
-
-<!-- RIGHT NAV -->
-<div class="right-nav">
-<a href="https://www.asabajumah.top"><i class="fas fa-home"></i></a>
-<a href="https://www.asabajumah.top/films.html"><i class="fas fa-film"></i></a>
-<a href="https://www.asabajumah.top/blog.html"><i class="fas fa-blog"></i></a>
-<a href="https://www.asabajumah.top/contact.html"><i class="fas fa-envelope"></i></a>
-<a href="https://help.asabajumah.top"><i class="fas fa-circle-question"></i></a>
-<a href="https://www.asabajumah.top/about.html"><i class="fas fa-user"></i></a>
-</div>
 
 </body>
 </html>
